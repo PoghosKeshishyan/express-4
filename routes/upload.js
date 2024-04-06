@@ -21,9 +21,26 @@ router.get('/', function(req, res, next) {
 });  
 
 // Маршрут для загрузки изображений
-router.post('/', upload.single('image'), function (req, res, next) {
+router.post('/', upload.single('file'), function (req, res, next) {
   // Обработка загруженного файла
   res.send('File uploaded successfully');
 });
+
+
+
+
+router.delete('/:filename', function(req, res) {
+  const filePath = __dirname + '/../public/uploads/' + req.params.filename; 
+
+  fs.unlink(filePath, (err) => {
+    if (err) {
+      console.error(err);
+      res.status(500).send('Error deleting file');
+    } else {
+      res.status(200).send('File deleted successfully');
+    }
+  });
+});
+
 
 module.exports = router;

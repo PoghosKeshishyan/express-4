@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- <script>
+        function generateDates(startDate, endDate) {
+            let aaa = 367;
+            const dates = [];
+            let currentDate = new Date(startDate);
+            const end = new Date(endDate);
+
+            const orer = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+            const months = [
+                'january', 'february', 'march', 'april', 'may', 'june',
+                'july', 'august', 'september', 'october', 'november', 'december'
+            ];
+
+            while (currentDate <= end) {
+                let titleeee = new Date(currentDate).getDay();
+                dates.push({
+                    id: aaa++,
+                    title: orer[titleeee] + ' ' + new Date(currentDate).getDate(),
+                    "arrived": "",
+                    "isGone": "",
+                    "parentId": 332333333,
+                    "disabled": false,
+                    "completed": false,
+                    year: new Date(currentDate).getFullYear(),
+                    month: months[new Date(currentDate).getMonth()],
+                });
+                currentDate.setDate(currentDate.getDate() + 1);
+            }
+
+            return dates;
+        }
+
+        // Пример использования
+        const startDate = new Date('2025-01-01');
+        const endDate = new Date('2050-12-31');
+        const datesList = generateDates(startDate, endDate);
+        document.write(JSON.stringify(datesList));
+    </script> -->
+
+
+
+
+
+
+
+
+
+    <script>
+        function generateDates(startDate, endDate) {
+            let aaa = 367;
+            const dates = [];
+            let currentDate = new Date(startDate);
+            const end = new Date(endDate);
+
+            const orer = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+            const months = [
+                'january', 'february', 'march', 'april', 'may', 'june',
+                'july', 'august', 'september', 'october', 'november', 'december'
+            ];
+
+            while (currentDate <= end) {
+                let titleeee = new Date(currentDate).getDay();
+                dates.push({
+                    id: aaa++,
+                    title: orer[titleeee] + ' ' + new Date(currentDate).getDate(),
+                    "arrived": "",
+                    "isGone": "",
+                    "parentId": 332333333,
+                    "disabled": false,
+                    "completed": false,
+                    year: new Date(currentDate).getFullYear(),
+                    month: months[new Date(currentDate).getMonth()],
+                });
+                currentDate.setDate(currentDate.getDate() + 1);
+            }
+
+            return dates;
+        }
+
+        // Пример использования
+        const startDate = new Date('2025-01-01');
+        const endDate = new Date('2050-12-31');
+        const datesList = generateDates(startDate, endDate);
+        document.write(JSON.stringify(datesList));
+    </script>
+
+
+
+</body>
+
+</html>
